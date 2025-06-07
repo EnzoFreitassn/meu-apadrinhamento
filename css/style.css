@@ -64,7 +64,7 @@ body {
 #experiencia {
   text-align: center;
   padding: 2rem 0;
-  background: #e6f7ff; /* opcional: repete o fundo claro */
+  background: #e6f7ff; 
 }
 #experiencia .section-title {
   display: inline-block;
@@ -92,6 +92,52 @@ body {
   font-size: 0.95rem;
 }
 .check-list li::before {
+  content: "✔";
+  position: absolute;
+  left: 0;
+  top: 0;
+  color: #1e60b9;
+  font-size: 1rem;
+  line-height: 1;
+}
+
+/* === Seção Tecnologias Aprendidas === */
+#tecnologias {
+  text-align: center;
+  padding: 2rem 0;
+  /* (opcional) repetir fundo claro */
+  background: #e6f7ff;
+}
+
+#tecnologias .section-title {
+  display: inline-block;
+  background: #1e60b9;
+  color: #fff;
+  padding: 0.5rem 1.5rem;
+  border-radius: 999px;
+  font-size: 1.1rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  margin-bottom: 1.5rem;
+}
+
+#tecnologias .check-list {
+  list-style: none;
+  padding: 0;
+  margin: 0 auto;
+  max-width: 240px;
+  text-align: left;
+}
+
+#tecnologias .check-list li {
+  position: relative;
+  padding-left: 1.8rem;
+  margin-bottom: 0.75rem;
+  line-height: 1.4;
+  font-size: 0.95rem;
+}
+
+#tecnologias .check-list li::before {
   content: "✔";
   position: absolute;
   left: 0;
