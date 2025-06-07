@@ -146,3 +146,48 @@ body {
   font-size: 1rem;
   line-height: 1;
 }
+
+/* === Seção Dificuldades === */
+#dificuldades {
+  text-align: center;
+  padding: 2rem 0;
+  background: #e6f7ff; /* mesmo fundo claro para consistência */
+}
+
+#dificuldades .section-title {
+  display: inline-block;
+  background: #1e60b9;
+  color: #fff;
+  padding: 0.5rem 1.5rem;
+  border-radius: 999px;
+  font-size: 1.1rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  margin-bottom: 1.5rem;
+}
+
+#dificuldades .check-list {
+  list-style: none;
+  padding: 0;
+  margin: 0 auto;
+  max-width: 240px;
+  text-align: left;
+}
+
+#dificuldades .check-list li {
+  position: relative;
+  padding-left: 1.8rem;
+  margin-bottom: 0.75rem;
+  line-height: 1.4;
+  font-size: 0.95rem;
+}
+
+#dificuldades .check-list li::before {
+  content: "✔";
+  position: absolute;
+  left: 0;
+  top: 0;
+  color: #1e60b9;
+  font-size: 1rem;
+  line-height: 1;
+}
