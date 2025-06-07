@@ -2,3 +2,18 @@ body {
   font-family: Arial, sans-serif;
   padding: 1rem;
 }
+
+/* Sobre mim */
+#sobre-mim {
+  max-width: 600px;
+  margin: 0 auto 3rem;
+  text-align: center;
+}
+#sobre-mim h2 {
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+}
+#sobre-mim p {
+  font-size: 1rem;
+  color: #161515;
+}
