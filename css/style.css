@@ -3,17 +3,60 @@ body {
   padding: 1rem;
 }
 
-/* Sobre mim */
-#sobre-mim {
-  max-width: 600px;
-  margin: 0 auto 3rem;
+/* === Hero / Título e Foto === */
+#hero-section {
   text-align: center;
+  margin: 2rem auto;
 }
-#sobre-mim h2 {
-  font-size: 2rem;
-  margin-bottom: 0.5rem;
+
+/* pílula azul */
+.section-title {
+  display: inline-block;
+  background: #1e60b9;
+  color: #fff;
+  padding: 0.5rem 1.5rem;
+  border-radius: 999px;
+  font-size: 1.1rem;
+  font-weight: bold;
+  text-transform: uppercase;
 }
-#sobre-mim p {
-  font-size: 1rem;
-  color: #161515;
+
+/* subtítulo */
+.subtitle {
+  font-size: 0.9rem;
+  color: #000;
+  margin-top: 0.5rem;
+  margin-bottom: 1.5rem;
+}
+
+/* parte destacada em azul */
+.subtitle .highlight {
+  color: #1e60b9;
+  font-weight: bold;
+}
+
+/* avatar grande */
+.avatar-large {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin: 1rem auto;
+  border: 4px solid #fff;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+}
+
+/* nome */
+.name {
+  font-size: 1.5rem;
+  color: #1e60b9;
+  margin: 0.5rem 0;
+  text-transform: uppercase;
+}
+
+/* padrinho */
+.godfather {
+  font-size: 0.9rem;
+  color: #333;
+  margin-bottom: 2rem;
 }
