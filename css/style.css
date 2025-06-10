@@ -1,85 +1,99 @@
+
+:root {
+  /* Cores principais */
+  --primary: #1e60b9;
+  --light-bg: #e6f7ff;
+  --social-bg: #e3f2fd;
+  --icon-bg: #eff0f1;
+  --font-base: Arial, sans-serif;
+}
+
+/* == Global == */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
 body {
-  font-family: Arial, sans-serif;
+  font-family: var(--font-base);
+  color: #222;
+  line-height: 1.5;
+  background: #fff;
+  max-width: 600px;
+  margin: 0 auto;
   padding: 1rem;
 }
 
-/* === Hero / Título e Foto === */
-#hero-section {
-  text-align: center;
-  margin: 2rem auto;
+a {
+  color: var(--primary);
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: underline;
 }
 
-/* pílula azul */
-.section-title {
+/* == Headings & Pills == */
+.section-title,
+.title-pill {
   display: inline-block;
-  background: #1e60b9;
+  background: var(--primary);
   color: #fff;
   padding: 0.5rem 1.5rem;
   border-radius: 999px;
   font-size: 1.1rem;
   font-weight: bold;
   text-transform: uppercase;
+  margin-bottom: 1rem;
 }
 
-/* subtítulo */
-.subtitle {
-  font-size: 0.9rem;
-  color: #000;
-  margin-top: 0.5rem;
-  margin-bottom: 1.5rem;
+/* Header / Hero */
+#hero {
+  text-align: center;      /* centraliza todo o conteúdo (incluindo a img) */
+  margin: 2rem auto;
 }
-
-/* parte destacada em azul */
-.subtitle .highlight {
-  color: #1e60b9;
+/* texto destacado dentro de .subtitle */
+.highlight {
+  color: var(--primary);
   font-weight: bold;
 }
 
-
-.avatar-large {
-  width: 120px;
-  height: 120px;
-  border-radius: 50%;
-  object-fit: cover;
-  margin: 1rem auto;
-  border: 4px solid #fff;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+/* Foto de perfil */
+.profile-img {
+  width: 140px;
+  height: 140px;
+  object-fit: cover;       /* garante que a imagem preencha o círculo sem distorcer */
+  border-radius: 50%;      /* círculo perfeito */
+  border: 4px solid #fff;  /* opcional: borda branca */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  display: inline-block;   /* para obedecer ao text-align:center do #hero */
+  margin-bottom: 1rem;
 }
-
 
 .name {
   font-size: 1.5rem;
-  color: #1e60b9;
-  margin: 0.5rem 0;
+  color: var(--primary);
+  margin-bottom: .5rem;
   text-transform: uppercase;
 }
-
-
 .godfather {
   font-size: 0.9rem;
   color: #333;
   margin-bottom: 2rem;
 }
 
-#experiencia {
+/* == Seções com fundo claro == */
+section {
   text-align: center;
   padding: 2rem 0;
-  background: #e6f7ff; 
+  background: var(--light-bg);
 }
-#experiencia .section-title {
-  display: inline-block;
-  background: #1e60b9;
-  color: #fff;
-  padding: 0.5rem 1.5rem;
-  border-radius: 999px;
-  font-size: 1.1rem;
-  font-weight: bold;
-  text-transform: uppercase;
-  margin-bottom: 1.5rem;
+section:nth-of-type(even) {
+  background: #fff;
 }
+
+/* == Listas de checklist == */
 .check-list {
   list-style: none;
-  padding: 0;
   margin: 0 auto;
   max-width: 240px;
   text-align: left;
@@ -88,161 +102,64 @@ body {
   position: relative;
   padding-left: 1.8rem;
   margin-bottom: 0.75rem;
-  line-height: 1.4;
   font-size: 0.95rem;
 }
 .check-list li::before {
   content: "✔";
   position: absolute;
   left: 0;
-  top: 0;
-  color: #1e60b9;
+  color: var(--primary);
   font-size: 1rem;
   line-height: 1;
 }
 
-/* === Seção Tecnologias Aprendidas === */
-#tecnologias {
-  text-align: center;
-  padding: 2rem 0;
-  /* (opcional) repetir fundo claro */
-  background: #e6f7ff;
-}
-
-#tecnologias .section-title {
-  display: inline-block;
-  background: #1e60b9;
-  color: #fff;
-  padding: 0.5rem 1.5rem;
-  border-radius: 999px;
-  font-size: 1.1rem;
-  font-weight: bold;
-  text-transform: uppercase;
-  margin-bottom: 1.5rem;
-}
-
-#tecnologias .check-list {
-  list-style: none;
-  padding: 0;
-  margin: 0 auto;
-  max-width: 240px;
-  text-align: left;
-}
-
-#tecnologias .check-list li {
-  position: relative;
-  padding-left: 1.8rem;
-  margin-bottom: 0.75rem;
-  line-height: 1.4;
-  font-size: 0.95rem;
-}
-
-#tecnologias .check-list li::before {
-  content: "✔";
-  position: absolute;
-  left: 0;
-  top: 0;
-  color: #1e60b9;
-  font-size: 1rem;
-  line-height: 1;
-}
-
-/* === Seção Dificuldades === */
-#dificuldades {
-  text-align: center;
-  padding: 2rem 0;
-  background: #e6f7ff; /* mesmo fundo claro para consistência */
-}
-
-#dificuldades .section-title {
-  display: inline-block;
-  background: #1e60b9;
-  color: #fff;
-  padding: 0.5rem 1.5rem;
-  border-radius: 999px;
-  font-size: 1.1rem;
-  font-weight: bold;
-  text-transform: uppercase;
-  margin-bottom: 1.5rem;
-}
-
-#dificuldades .check-list {
-  list-style: none;
-  padding: 0;
-  margin: 0 auto;
-  max-width: 240px;
-  text-align: left;
-}
-
-#dificuldades .check-list li {
-  position: relative;
-  padding-left: 1.8rem;
-  margin-bottom: 0.75rem;
-  line-height: 1.4;
-  font-size: 0.95rem;
-}
-
-#dificuldades .check-list li::before {
-  content: "✔";
-  position: absolute;
-  left: 0;
-  top: 0;
-  color: #1e60b9;
-  font-size: 1rem;
-  line-height: 1;
-}
-
-/* Estilo da seção de redes sociais */
+/* == Rodapé / Redes Sociais == */
 #redes {
-    background-color: #e3f2fd; /* Cor de fundo azul clara */
-    padding: 20px;
-    border-radius: 10px;
-    margin-top: 20px;
-    text-align: center;
+  background: var(--social-bg);
+  padding: 1.5rem;
+  border-radius: 10px;
+  text-align: center;
+  margin-top: 2rem;
 }
-
 #redes .section-title {
-    font-size: 1.2rem;
-    color: #cfd0d3; /* Cor azul para o título */
-    font-weight: bold;
-    margin-bottom: 10px;
+  color: #fff;
+}
+.social-links {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin: 1rem 0;
+}
+.social-links a {
+  width: 40px;
+  height: 40px;
+  background: var(--icon-bg);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color 0.3s;
+}
+.social-links a:hover {
+  background: var(--primary);
+}
+.social-links img {
+  width: 20px;
+  height: 20px;
+}
+.website a {
+  font-weight: bold;
+  display: inline-block;
+  margin-top: .5rem;
 }
 
-#redes .social-links {
-    display: flex;
-    justify-content: center;
-    gap: 20px;
-    margin-bottom: 100px;
-}
-
-#redes .social-links a {
-    display: inline-block;
-    width: 40px; /* Tamanho dos ícones */
-    height: 40px;
-    background-color: #eff0f1; /* Fundo azul para os ícones */
-    border-radius: 50%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    transition: background-color 0.3s;
-}
-
-#redes .social-links a:hover {
-    background-color: #1e88e5; /* Cor azul mais forte no hover */
-}
-
-#redes .social-links img {
-    width: 20px; /* Ajuste o tamanho do ícone */
-    height: 20px;
-}
-
-#redes .website a {
-    color: #1a4fb8; /* Cor azul para o link */
-    text-decoration: none;
-    font-size: 1rem;
-    font-weight: bold;
-}
-
-#redes .website a:hover {
-    text-decoration: underline; /* Sublinha o link ao passar o mouse */
+/* == Responsividade == */
+@media (max-width: 400px) {
+  body {
+    padding: 0.5rem;
+  }
+  .check-list,
+  .social-links {
+    max-width: 100%;
+  }
 }
