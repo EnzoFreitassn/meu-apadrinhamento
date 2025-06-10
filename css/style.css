@@ -191,3 +191,58 @@ body {
   font-size: 1rem;
   line-height: 1;
 }
+
+/* Estilo da seção de redes sociais */
+#redes {
+    background-color: #e3f2fd; /* Cor de fundo azul clara */
+    padding: 20px;
+    border-radius: 10px;
+    margin-top: 20px;
+    text-align: center;
+}
+
+#redes .section-title {
+    font-size: 1.2rem;
+    color: #cfd0d3; /* Cor azul para o título */
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+#redes .social-links {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-bottom: 100px;
+}
+
+#redes .social-links a {
+    display: inline-block;
+    width: 40px; /* Tamanho dos ícones */
+    height: 40px;
+    background-color: #eff0f1; /* Fundo azul para os ícones */
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: background-color 0.3s;
+}
+
+#redes .social-links a:hover {
+    background-color: #1e88e5; /* Cor azul mais forte no hover */
+}
+
+#redes .social-links img {
+    width: 20px; /* Ajuste o tamanho do ícone */
+    height: 20px;
+}
+
+#redes .website a {
+    color: #1a4fb8; /* Cor azul para o link */
+    text-decoration: none;
+    font-size: 1rem;
+    font-weight: bold;
+}
+
+#redes .website a:hover {
+    text-decoration: underline; /* Sublinha o link ao passar o mouse */
+}
