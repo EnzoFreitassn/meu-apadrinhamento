@@ -1,7 +1,10 @@
+
 :root {
+  /* Cores principais */
   --primary: #1e60b9;
   --light-bg: #e6f7ff;
   --social-bg: #e3f2fd;
+  --icon-bg: #eff0f1;
   --font-base: Arial, sans-serif;
 }
 
@@ -20,6 +23,7 @@ body {
   margin: 0 auto;
   padding: 1rem;
 }
+
 a {
   color: var(--primary);
   text-decoration: none;
@@ -29,7 +33,8 @@ a:hover {
 }
 
 /* == Headings & Pills == */
-.section-title {
+.section-title,
+.title-pill {
   display: inline-block;
   background: var(--primary);
   color: #fff;
@@ -41,29 +46,33 @@ a:hover {
   margin-bottom: 1rem;
 }
 
-/* == Hero == */
+/* Header / Hero */
 #hero {
-  text-align: center;
+  text-align: center;      /* centraliza todo o conteúdo (incluindo a img) */
   margin: 2rem auto;
 }
+/* texto destacado dentro de .subtitle */
 .highlight {
   color: var(--primary);
   font-weight: bold;
 }
+
+/* Foto de perfil */
 .profile-img {
   width: 140px;
   height: 140px;
-  object-fit: cover;
-  border-radius: 50%;
-  border: 4px solid #fff;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-  display: inline-block;
+  object-fit: cover;       /* garante que a imagem preencha o círculo sem distorcer */
+  border-radius: 50%;      /* círculo perfeito */
+  border: 4px solid #fff;  /* opcional: borda branca */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  display: inline-block;   /* para obedecer ao text-align:center do #hero */
   margin-bottom: 1rem;
 }
+
 .name {
   font-size: 1.5rem;
   color: var(--primary);
-  margin-bottom: 0.5rem;
+  margin-bottom: .5rem;
   text-transform: uppercase;
 }
 .godfather {
@@ -72,7 +81,7 @@ a:hover {
   margin-bottom: 2rem;
 }
 
-/* == Seções == */
+/* == Seções com fundo claro == */
 section {
   text-align: center;
   padding: 2rem 0;
@@ -82,7 +91,7 @@ section:nth-of-type(even) {
   background: #fff;
 }
 
-/* == Checklist == */
+/* == Listas de checklist == */
 .check-list {
   list-style: none;
   margin: 0 auto;
@@ -114,46 +123,38 @@ section:nth-of-type(even) {
 }
 #redes .section-title {
   color: #fff;
-  margin-bottom: 1rem;
 }
-
-/* container de ícones */
 .social-links {
   display: flex;
   justify-content: center;
   gap: 1rem;
   margin: 1rem 0;
 }
-
 .social-links a {
   width: 40px;
   height: 40px;
-  background: none;
-  border: 2px solid var(--primary);
+  background: var(--icon-bg);
   border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
-  transition: background 0.3s, border-color 0.3s;
-  color: var(--primary);
-  font-size: 1.25rem;
+  transition: background-color 0.3s;
 }
 
 .social-links a:hover {
   background: var(--primary);
-  border-color: var(--primary);
-  color: var(--light-bg);
-  text-decoration: none;
 }
-
-/* link do site */
+.social-links img {
+  width: 20px;
+  height: 20px;
+}
 .website a {
   font-weight: bold;
   display: inline-block;
-  margin-top: 0.5rem;
+  margin-top: .5rem;
 }
 
-/* == Responsivo == */
+/* == Responsividade == */
 @media (max-width: 400px) {
   body {
     padding: 0.5rem;
