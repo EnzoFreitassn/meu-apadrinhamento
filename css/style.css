@@ -125,7 +125,6 @@ section:nth-of-type(even) {
   margin: 1rem 0;
 }
 
-/* link-círculo + SVG */
 .social-links a {
   width: 40px;
   height: 40px;
@@ -136,19 +135,15 @@ section:nth-of-type(even) {
   align-items: center;
   justify-content: center;
   transition: background 0.3s, border-color 0.3s;
+  color: var(--primary);
+  font-size: 1.25rem;
 }
-.social-links a svg {
-  width: 20px;
-  height: 20px;
-  fill: var(--primary);
-  transition: fill 0.3s;
-}
+
 .social-links a:hover {
   background: var(--primary);
   border-color: var(--primary);
-}
-.social-links a:hover svg {
-  fill: #fff;
+  color: var(--light-bg);
+  text-decoration: none;
 }
 
 /* link do site */
